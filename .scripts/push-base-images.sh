@@ -14,3 +14,7 @@ function push_to_github()
 }
 
 push_to_github "php:8.3.13-apache-bookworm"
+push_to_github "postgres:15.12-alpine"
+push_to_github "wiremock/wiremock:3.9.2"
+push_to_github "dpage/pgadmin4:9.1"
+push_to_github "polinux/mkdocs:1.5.2"

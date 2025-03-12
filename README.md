@@ -35,5 +35,5 @@ docker push ghcr.io/laveracloudsolutions/php:8.3.13-apache-bookworm
 ## Github Administration - Public Docker Image
 
 1- Désactiver "Inherit access from source repository" > https://github.com/settings/packages
-2- Sélectionner le package concerné > https://github.com/laveracloudsolutions?tab=packages
+2- Sélectionner le package concerné > https://github.com/orgs/laveracloudsolutions/packages
 3- Package Setting > Danger Zone > Change Visibility

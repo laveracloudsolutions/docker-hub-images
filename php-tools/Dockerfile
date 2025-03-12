@@ -2,7 +2,7 @@
 
 #Image intiialement basé sur le docker file https://github.com/silarhi/docker-php/tree/main/7.4-symfony/
 #Détail de l'image 7.4-apache : https://hub.docker.com/layers/php/library/php/7.4-apache/images/sha256-3f04eaed6449ebe2f2969c5f6176f745ae9bcef659f67b6c7fcbe54d8a15a2db?context=explore
-FROM php:8.3.13-apache-bookworm
+FROM ghcr.io/laveracloudsolutions/php:8.3.13-apache-bookworm
 
 
 ENV COMPOSER_VERSION=2.2.4

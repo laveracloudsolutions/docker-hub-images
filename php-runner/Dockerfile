@@ -1,4 +1,4 @@
-FROM php:8.3.13-apache-bookworm
+FROM ghcr.io/laveracloudsolutions/php:8.3.13-apache-bookworm
 
 RUN apt-get update -qq && \
     apt-get install -qy \
