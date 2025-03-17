@@ -1,12 +1,10 @@
 # docker-images
 
-Ensemble d'image Docker personnalisées
-
-[[_TOC_]]
+Ensemble d'images Docker personnalisées
 
 ## Push des Images Docker dans le Registry Github
 
-* Prérequis
+### Prérequis
 
 Créer un "Personal Access Token" > https://github.com/settings/tokens
 
@@ -16,9 +14,9 @@ Créer un "Personal Access Token" > https://github.com/settings/tokens
 > * write:packages
 > * delete:packages
 
-* Docker Login
+### Docker Login
 
-```
+```bash
 GHCR_USERNAME="XXX"
 GHCR_PAT="XXX"
 echo $GHCR_PAT | docker login ghcr.io -u GHCR_USERNAME --password-stdin
@@ -26,14 +24,15 @@ echo $GHCR_PAT | docker login ghcr.io -u GHCR_USERNAME --password-stdin
 
 ## Préparation des images (Exemple)
 
-```
-# Tagguer l'image
-docker build -t ghcr.io/laveracloudsolutions/php:8.3.13-apache-bookworm .
-docker push ghcr.io/laveracloudsolutions/php:8.3.13-apache-bookworm
-```
+* Pour les images en provenance de Docker Hub, sans modification > Voir script dédié [push-base-images.sh](.scripts/push-base-images.sh)
+* Pour les images de bases personnalisées :
+    * [Build projets PHP](php-tools/README.md)
+    * [Run projets PHP](php-runner/README.md)
 
 ## Github Administration - Public Docker Image
 
-1- Désactiver "Inherit access from source repository" > https://github.com/settings/packages
-2- Sélectionner le package concerné > https://github.com/orgs/laveracloudsolutions/packages
-3- Package Setting > Danger Zone > Change Visibility
+Par défaut, les repositories Github sont privé, pour les passer en publiques:
+
+* Désactiver "Inherit access from source repository" > https://github.com/settings/packages
+* Sélectionner le package concerné > https://github.com/orgs/laveracloudsolutions/packages
+* Package Setting > Danger Zone > Change Visibility
