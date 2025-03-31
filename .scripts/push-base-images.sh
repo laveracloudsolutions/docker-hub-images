@@ -27,26 +27,26 @@ function build_and_push_to_github()
   popd
 }
 
-push_to_github "dpage/pgadmin4:9.1"
-push_to_github "dockage/mailcatcher:0.9"
-push_to_github "maildev/maildev:2.2.1"
-push_to_github "nginx:1.27.4"
-push_to_github "node:20.16.0-bullseye"
-push_to_github "node:21-bullseye-slim"
-push_to_github "node:22.14.0-bullseye"
-push_to_github "polinux/mkdocs:1.5.2"
-push_to_github "php:8.3.13-apache-bookworm"
-push_to_github "postgres:15.12-alpine"
-push_to_github "postgres:16-alpine"
-push_to_github "redis:5-alpine"
-push_to_github "redis:7.2.5-bookworm"
-push_to_github "ubuntu:20.04"
-push_to_github "ubuntu:24.04"
-push_to_github "wiremock/wiremock:3.9.2"
-
-# Custom Images
+#push_to_github "dpage/pgadmin4:9.1"
+#push_to_github "dockage/mailcatcher:0.9"
+#push_to_github "maildev/maildev:2.2.1"
+#push_to_github "nginx:1.27.4"
+#push_to_github "node:20.16.0-bullseye"
+#push_to_github "node:21-bullseye-slim"
+#push_to_github "node:22.14.0-bullseye"
+#push_to_github "polinux/mkdocs:1.5.2"
+#push_to_github "php:8.3.13-apache-bookworm"
+#push_to_github "postgres:15.12-alpine"
+#push_to_github "postgres:16-alpine"
+#push_to_github "redis:5-alpine"
+#push_to_github "redis:7.2.5-bookworm"
+#push_to_github "ubuntu:20.04"
+#push_to_github "ubuntu:24.04"
+#push_to_github "wiremock/wiremock:3.9.2"
+#
+## Custom Images
 build_and_push_to_github "php-runner" "${REPOSITORY}/php-runner:8.3.13-01"
-build_and_push_to_github "php-tools" "${REPOSITORY}/php-tools:8.3.13-01"
+#build_and_push_to_github "php-tools" "${REPOSITORY}/php-tools:8.3.13-01"
 
 
 # Fin Chronomètre

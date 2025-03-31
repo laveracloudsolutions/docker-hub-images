@@ -65,8 +65,7 @@ RUN docker-php-ext-configure zip && \
 
 RUN pecl install xdebug && docker-php-ext-enable xdebug
 
-RUN a2enmod headers
-RUN a2enmod rewrite remoteip security2
+RUN a2enmod rewrite remoteip headers security2
 
 #Changement du fuseau horaire de la machine linux pour l'aligner avec le fuseau de Paris
 RUN rm /etc/localtime
