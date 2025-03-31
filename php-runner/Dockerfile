@@ -13,6 +13,13 @@ RUN apt-get update -qq && \
     libzip-dev=1.* \
     libpq-dev=15.* \
     libxml2-dev=2.* \
+    xfonts-75dpi=1:1.* \
+    xfonts-base=1:1.* \
+    fontconfig=2.* \
+    libfreetype6=2.* \
+    libjpeg62-turbo=1:2.* \
+    libpng16-16=1.* \
+    libxrender1=1:0* \
     unzip=6.* \
     zip=3.* \
     zlib1g-dev=1:1.* \
