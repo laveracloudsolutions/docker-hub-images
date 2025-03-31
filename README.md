@@ -24,6 +24,11 @@ echo $GHCR_PAT | docker login ghcr.io -u GHCR_USERNAME --password-stdin
 
 ## Préparation des images (Exemple)
 
+Pour mise à jour globale des images
+```bash
+./.scripts/push-base-images.sh
+```
+
 * Pour les images en provenance de Docker Hub, sans modification > Voir script dédié [push-base-images.sh](.scripts/push-base-images.sh)
 * Pour les images de bases personnalisées :
     * [Build projets PHP](php-tools/README.md)
