@@ -33,7 +33,13 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources
 #Les dependances fontconfig, libfreetype6 libjpeg62-turbo libpng16-16 libxrender1 xfonts-75dpi xfonts-base sont utiles pour wkhtmltox
 RUN apt-get update -qq && \
     apt-get install -qy \
+    apache2=2.4.* \
+    bind9=1:9.* \
+    net-tools=2.* \
+    libkrb5-3=1.20.* \
     vim=2:9.* \
+    dnsutils=1:9.* \
+    iputils-ping=3:* \
     git=1:2.* \
     gnupg=2.* \
     libicu-dev=72.* \
@@ -46,9 +52,14 @@ RUN apt-get update -qq && \
     xvfb=2:21.* \
     libapache2-mod-security2=2.* \
     curl=7.* \
-    nodejs \
-    linux-libc-dev=6.1.128-1\
+    linux-libc-dev=6.1.* \
     expat=2.5.0-1+deb12u1 \
+    libpng-dev=1.6.* \
+    libfreetype6-dev=2.12.* \
+    libjpeg62-turbo-dev=1:2.1.* \
+    nodejs=20.* \
+    libfreetype6-dev=2.12.* \
+    libjpeg62-turbo-dev=1:2.1.* \
     yarn
 
 
@@ -61,9 +72,11 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 #Install Postgre PDO
 RUN docker-php-ext-configure zip && \
     docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql && \
-    docker-php-ext-install -j$(nproc) intl pgsql pdo pdo_pgsql opcache zip
+    docker-php-ext-configure gd --with-freetype --with-jpeg && \
+    docker-php-ext-install -j"$(nproc)" intl pgsql pdo pdo_pgsql opcache zip gd
 
 RUN pecl install xdebug && docker-php-ext-enable xdebug
+RUN pecl install pcov && docker-php-ext-enable pcov
 
 RUN a2enmod rewrite remoteip headers security2
 
