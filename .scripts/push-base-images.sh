@@ -43,13 +43,13 @@ push_to_github "redis:7.2.5-bookworm"
 push_to_github "ubuntu:20.04"
 push_to_github "ubuntu:24.04"
 push_to_github "wiremock/wiremock:3.9.2"
+push_to_github "wiremock/wiremock:3.12.1"
 
 # Custom Images
 build_and_push_to_github "node-tools-20" "${REPOSITORY}/node-tools:20.16.0-01"
 build_and_push_to_github "node-tools-21" "${REPOSITORY}/node-tools:21-01"
 build_and_push_to_github "php-runner-8.3" "${REPOSITORY}/php-runner:8.3.13-01"
 build_and_push_to_github "php-tools-8.3" "${REPOSITORY}/php-tools:8.3.13-01"
-
 
 # Fin Chronomètre
 DURATION=$SECONDS

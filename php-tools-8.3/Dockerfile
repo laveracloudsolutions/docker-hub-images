@@ -58,8 +58,6 @@ RUN apt-get update -qq && \
     libfreetype6-dev=2.12.* \
     libjpeg62-turbo-dev=1:2.1.* \
     nodejs=20.* \
-    libfreetype6-dev=2.12.* \
-    libjpeg62-turbo-dev=1:2.1.* \
     yarn
 
 
