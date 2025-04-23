@@ -58,7 +58,8 @@ RUN apt-get update -qq && \
     libfreetype6-dev=2.12.* \
     libjpeg62-turbo-dev=1:2.1.* \
     nodejs=20.* \
-    yarn
+    yarn \
+    zsh=5.*
 
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
