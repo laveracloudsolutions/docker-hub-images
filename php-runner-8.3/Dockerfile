@@ -1,6 +1,7 @@
 FROM ghcr.io/laveracloudsolutions/php:8.3.13-apache-bookworm
 
-RUN apt-get update -qq && \
+RUN apt-get update  && \
+    apt-get dist-upgrade -y && \
     apt-get install -qy \
     net-tools=2.* \
     ca-certificates=* \
