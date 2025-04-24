@@ -59,7 +59,12 @@ RUN apt-get update -qq && \
     libjpeg62-turbo-dev=1:2.1.* \
     nodejs=20.* \
     yarn \
-    zsh=5.*
+    zsh=5.* \
+    xz-utils=5.4.1-1 \
+    libtasn1-6=4.19.0-2+deb12u1 \
+    gnutls-bin=3.7.9-2+deb12u4 \
+    glibc-source=2.36-9+deb12u10 \
+    perl=5.36.0-7+deb12u2
 
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
