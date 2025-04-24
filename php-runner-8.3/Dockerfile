@@ -26,8 +26,8 @@ RUN apt-get update -qq && \
     xvfb=2:21.* \
     libapache2-mod-security2=2.* \
     curl=7.* \
-    linux-libc-dev=6.1.128-1\
-    expat=2.5.0-1+deb12u1
+    linux-libc-dev=6.1.* \
+    expat=2.5.*
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 

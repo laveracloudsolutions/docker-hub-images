@@ -48,8 +48,9 @@ push_to_github "wiremock/wiremock:3.12.1"
 # Custom Images
 build_and_push_to_github "node-tools-20" "${REPOSITORY}/node-tools:20.16.0-01"
 build_and_push_to_github "node-tools-21" "${REPOSITORY}/node-tools:21-01"
+build_and_push_to_github "node-tools-22" "${REPOSITORY}/node-tools:22-01"
 build_and_push_to_github "php-runner-8.3" "${REPOSITORY}/php-runner:8.3.13-01"
-build_and_push_to_github "php-tools-8.3" "${REPOSITORY}/php-tools:8.3.13-01"
+build_and_push_to_github "php-tools-8.3" "${REPOSITORY}/php-tools:8.3.13-03"
 
 # Fin Chronomètre
 DURATION=$SECONDS
