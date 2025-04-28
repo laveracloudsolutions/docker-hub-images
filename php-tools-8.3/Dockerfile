@@ -15,7 +15,10 @@ COPY ./config/php/php-cli.ini $PHP_INI_DIR/php-cli.ini
 COPY ./config/php/xdebug.ini $PHP_INI_DIR/conf.d/xxx-xdebug.ini
 
 # Prepare Node setup
-RUN apt-get update -qq && apt-get install -y ca-certificates curl gnupg
+RUN apt-get update  && \
+    apt-get dist-upgrade -y && \
+    apt-get install -qy ca-certificates curl gnupg
+
 RUN mkdir -p /etc/apt/keyrings
 RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
 
@@ -67,7 +70,7 @@ RUN apt-get update -qq && \
     perl=5.36.0-7+deb12u2
 
 
-RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN rm -rf /tmp/* /var/tmp/*
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --version=${COMPOSER_VERSION}
 

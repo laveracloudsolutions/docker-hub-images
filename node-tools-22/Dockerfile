@@ -1,16 +1,15 @@
-FROM node:22.14.0-bullseye-slim
+FROM ghcr.io/laveracloudsolutions/node:22-bullseye-slim
 
 # install latest Google Chrome which will be used for running unit tests
-RUN \
-  apt update && \
-  apt install -y \
+RUN apt-get update  && \
+    apt-get dist-upgrade -y && \
+    apt-get install -qy \
     chromium \
     openjdk-17-jre \
     git \
-    curl \
-    && \
-  apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    curl
 
+RUN rm -rf /tmp/* /var/tmp/*
 
 # "fake" dbus address to prevent errors
 # https://github.com/SeleniumHQ/docker-selenium/issues/87

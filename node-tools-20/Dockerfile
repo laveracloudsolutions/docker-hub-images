@@ -1,12 +1,16 @@
 # crdevopsregistrynortheu001.azurecr.io/custom-node:20.16.0
-FROM ghcr.io/laveracloudsolutions/node:20.16.0-bullseye
+FROM ghcr.io/laveracloudsolutions/node:20-bullseye-slim
 
 # install latest Google Chrome which will be used for running unit tests
-RUN \
-  apt update && \
-  apt install -y chromium && \
-  apt install -y openjdk-17-jre \
-  && apt clean
+RUN apt-get update  && \
+    apt-get dist-upgrade -y && \
+    apt-get install -qy \
+    chromium  \
+    openjdk-17-jre \
+    git \
+    curl
+
+RUN rm -rf /tmp/* /var/tmp/*
 
 # "fake" dbus address to prevent errors
 # https://github.com/SeleniumHQ/docker-selenium/issues/87
