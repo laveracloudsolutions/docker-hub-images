@@ -84,6 +84,7 @@ RUN docker-php-ext-configure zip && \
 
 RUN pecl install xdebug && docker-php-ext-enable xdebug
 RUN pecl install pcov && docker-php-ext-enable pcov
+RUN pecl install opentelemetry protobuf && docker-php-ext-enable opentelemetry protobuf
 
 RUN a2enmod rewrite remoteip headers security2
 

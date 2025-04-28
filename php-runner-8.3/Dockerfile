@@ -37,6 +37,8 @@ RUN docker-php-ext-configure zip && \
     docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql && \
     docker-php-ext-install -j"$(nproc)" intl pgsql pdo pdo_pgsql opcache zip
 
+RUN pecl install opentelemetry protobuf && docker-php-ext-enable opentelemetry protobuf
+
 # Enable apache modules
 RUN a2enmod headers
 RUN a2enmod rewrite remoteip security2
