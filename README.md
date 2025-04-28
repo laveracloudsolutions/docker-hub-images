@@ -41,3 +41,7 @@ Par défaut, les repositories Github sont privé, pour les passer en publiques:
 * Désactiver "Inherit access from source repository" > https://github.com/settings/packages
 * Sélectionner le package concerné > https://github.com/orgs/laveracloudsolutions/packages
 * Package Setting > Danger Zone > Change Visibility
+
+## Github Action - Mise à jour régulière
+
+* URL > https://github.com/laveracloudsolutions/docker-images/actions
