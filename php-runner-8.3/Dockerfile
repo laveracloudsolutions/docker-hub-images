@@ -28,7 +28,8 @@ RUN apt-get update  && \
     libapache2-mod-security2=2.* \
     curl=7.* \
     linux-libc-dev=6.1.* \
-    expat=2.5.*
+    expat=2.5.* \
+    libgrpc++-dev=1.*
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
@@ -38,6 +39,16 @@ RUN docker-php-ext-configure zip && \
     docker-php-ext-install -j"$(nproc)" intl pgsql pdo pdo_pgsql opcache zip
 
 RUN pecl install opentelemetry protobuf && docker-php-ext-enable opentelemetry protobuf
+
+# Install GRPC
+# PECL installation is far too long, so install manually
+# @see https://stackoverflow.com/a/78683184
+RUN git clone --depth 1 -b v1.51.x https://github.com/grpc/grpc /tmp/grpc \
+    && cd /tmp/grpc/src/php/ext/grpc \
+    && phpize && ./configure && make && make install \
+    && rm -rf /tmp/grpc
+
+RUN docker-php-ext-enable grpc
 
 # Enable apache modules
 RUN a2enmod headers
