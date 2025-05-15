@@ -25,11 +25,6 @@ function build_and_push_to_github()
   popd
 }
 
-# Buildx Images ONLY --platform linux/amd64
-DOCKER_PLATFORMS="--platform linux/amd64"
-build_and_push_to_github "mkdocs" "polinux/mkdocs:1.5.2"
-build_and_push_to_github "azure-devops-tools" "azure-devops-tools:2.72" "azure-devops-tools:latest"
-
 # Buildx Images --platform linux/amd64,linux/arm64
 DOCKER_PLATFORMS="--platform linux/amd64,linux/arm64"
 build_and_push_to_github "pgadmin4" "dpage/pgadmin4:9.1"
@@ -58,6 +53,11 @@ DOCKER_PLATFORMS="--platform linux/amd64,linux/arm64/v8"
 build_and_push_to_github "php-8.3" "php:8.3.13-apache-bookworm"
 build_and_push_to_github "php-runner-8.3" "php-runner:8.3-apache-bookworm" "php-runner:8.3.13-01"
 build_and_push_to_github "php-tools-8.3" "php-tools:8.3-apache-bookworm" "php-tools:8.3.13-03"
+
+# Buildx Images ONLY --platform linux/amd64
+DOCKER_PLATFORMS="--platform linux/amd64"
+build_and_push_to_github "mkdocs" "polinux/mkdocs:1.5.2"
+build_and_push_to_github "azure-devops-tools" "azure-devops-tools:2.72" "azure-devops-tools:latest"
 
 # Fin Chronomètre
 DURATION=$SECONDS
