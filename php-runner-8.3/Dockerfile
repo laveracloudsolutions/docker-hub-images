@@ -27,7 +27,7 @@ RUN apt-get update  && \
     xvfb=2:21.* \
     libapache2-mod-security2=2.* \
     curl=7.* \
-    linux-libc-dev=6.1.* \
+    linux-libc-dev=6.* \
     expat=2.5.* \
     libgrpc++-dev=1.*
 

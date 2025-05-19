@@ -55,7 +55,7 @@ RUN apt-get update -qq && \
     xvfb=2:21.* \
     libapache2-mod-security2=2.* \
     curl=7.* \
-    linux-libc-dev=6.1.* \
+    linux-libc-dev=6.* \
     expat=2.* \
     libpng-dev=1.6.* \
     libfreetype6-dev=2.* \
