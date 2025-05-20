@@ -13,7 +13,8 @@ RUN apt-get update && \
     git=1:2.*  \
     gcc=4:12.*  \
     libpython3-dev=3.*  \
-    python3-venv=3.*
+    python3-venv=3.* \
+    openssh-client=1:9.*
 
 # Python init
 RUN python3 -m venv /venv && \
