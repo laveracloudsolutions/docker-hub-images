@@ -5,7 +5,7 @@ RUN apt-get update  && \
     apt-get dist-upgrade -y && \
     apt-get install -qy \
     chromium \
-    openjdk-17-jre \
+    openjdk-17-jre=17.0.15* \
     git \
     curl
 
