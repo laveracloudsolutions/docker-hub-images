@@ -18,8 +18,11 @@ RUN apt-get update  && \
     xfonts-base=1:1.* \
     fontconfig=2.* \
     libfreetype6=2.* \
+    libfreetype6-dev=2.* \
     libjpeg62-turbo=1:2.* \
+    libjpeg62-turbo-dev=1:2.* \
     libpng16-16=1.* \
+    libpng-dev=1.6.* \
     libxrender1=1:0* \
     unzip=6.* \
     zip=3.* \
@@ -36,7 +39,8 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 #PHP Extensions
 RUN docker-php-ext-configure zip && \
     docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql && \
-    docker-php-ext-install -j"$(nproc)" intl pgsql pdo pdo_pgsql opcache zip
+    docker-php-ext-configure gd --with-freetype --with-jpeg && \
+    docker-php-ext-install -j"$(nproc)" intl pgsql pdo pdo_pgsql opcache zip gd
 
 RUN pecl install opentelemetry protobuf && docker-php-ext-enable opentelemetry protobuf
 
@@ -47,7 +51,6 @@ RUN git clone --depth 1 -b v1.51.x https://github.com/grpc/grpc /tmp/grpc \
     && cd /tmp/grpc/src/php/ext/grpc \
     && phpize && ./configure && make && make install \
     && rm -rf /tmp/grpc
-
 RUN docker-php-ext-enable grpc
 
 # Enable apache modules
