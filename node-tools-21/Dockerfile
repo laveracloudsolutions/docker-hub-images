@@ -2,12 +2,11 @@ FROM ghcr.io/laveracloudsolutions/node:21-bullseye-slim
 
 # install latest Google Chrome which will be used for running unit tests
 RUN apt-get update  && \
-    apt-get dist-upgrade -y && \
-    apt-get install -qy \
-    chromium \
-    openjdk-17-jre=17.0.15* \
-    git \
-    curl
+    apt-get dist-upgrade -y
+RUN apt-get install -qy chromium=120.0.*
+RUN apt-get install -qy openjdk-17-jre=17.0.15*
+RUN apt-get install -qy git=1:2.*
+RUN apt-get install -qy curl=7.74.*
 
 RUN rm -rf /tmp/* /var/tmp/*
 

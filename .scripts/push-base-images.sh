@@ -3,6 +3,7 @@
 set -e # failOnStderr
 # Début Chronomètre
 SECONDS=0
+ERROR_MESSAGE=""
 
 # Docker Repository
 REPOSITORY="ghcr.io/laveracloudsolutions"
@@ -20,9 +21,17 @@ function build_and_push_to_github()
   if [ -n "$DOCKER_IMAGE_ADDITIONNAL_TAG" ]; then
     DOCKER_TAG+=" -t ${REPOSITORY}/${DOCKER_IMAGE_ADDITIONNAL_TAG}"
   fi
+
   pushd ${DOCKER_FOLDER}
-  docker buildx build ${DOCKER_TAG} ${DOCKER_PLATFORMS} . --push
+  { # try
+      docker buildx build --no-cache ${DOCKER_TAG} ${DOCKER_PLATFORMS} . --push
+
+  } || { # catch
+      echo "Build $DOCKER_FOLDER FAILED."
+      ERROR_MESSAGE+="Build $DOCKER_FOLDER FAILED.\n"
+  }
   popd
+
 }
 
 # Buildx Images --platform linux/amd64,linux/arm64
@@ -60,6 +69,9 @@ build_and_push_to_github "python-tools-3.13" "python-tools:3.13-slim-bookworm"
 DOCKER_PLATFORMS="--platform linux/amd64"
 build_and_push_to_github "mkdocs" "polinux/mkdocs:1.5.2"
 build_and_push_to_github "azure-devops-tools" "azure-devops-tools:2.72" "azure-devops-tools:latest"
+
+# Affichage des messages d'erreur
+echo -e ${ERROR_MESSAGE}
 
 # Fin Chronomètre
 DURATION=$SECONDS

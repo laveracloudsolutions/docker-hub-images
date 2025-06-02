@@ -17,7 +17,7 @@ COPY ./config/php/xdebug.ini $PHP_INI_DIR/conf.d/xxx-xdebug.ini
 # Prepare Node setup
 RUN apt-get update  && \
     apt-get dist-upgrade -y && \
-    apt-get install -qy ca-certificates curl gnupg
+    apt-get install -qy ca-certificates=* curl=7.* gnupg=2.*
 
 RUN mkdir -p /etc/apt/keyrings
 RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
