@@ -70,9 +70,13 @@ DOCKER_PLATFORMS="--platform linux/amd64"
 build_and_push_to_github "mkdocs" "polinux/mkdocs:1.5.2"
 build_and_push_to_github "azure-devops-tools" "azure-devops-tools:2.72" "azure-devops-tools:latest"
 
-# Affichage des messages d'erreur
-echo -e ${ERROR_MESSAGE}
-
 # Fin Chronomètre
 DURATION=$SECONDS
 echo "Execution Time: $((DURATION / 60)) minutes and $((DURATION % 60)) seconds."
+
+# Affichage des messages d'erreur (si besoin)
+if [ -n "${ERROR_MESSAGE}" ]; then
+  echo "Liste des builds en erreur:"
+  echo -e ${ERROR_MESSAGE}
+  exit 1
+fi
