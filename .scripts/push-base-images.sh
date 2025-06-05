@@ -56,13 +56,13 @@ build_and_push_to_github "wiremock-3.12" "wiremock/wiremock:3.12.1"
 # Custom Images
 build_and_push_to_github "node-tools-20" "node-tools:20-bullseye-slim" "node-tools:20.16.0-01"
 build_and_push_to_github "node-tools-21" "node-tools:21-bullseye-slim" "node-tools:21-01"
-#build_and_push_to_github "node-tools-22" "node-tools:22-bullseye-slim" "node-tools:22-01"
+build_and_push_to_github "node-tools-22" "node-tools:22-bullseye-slim" "node-tools:22-01"
 
 # Buildx Images --platform linux/amd64,linux/arm64/v8
 DOCKER_PLATFORMS="--platform linux/amd64,linux/arm64/v8"
 build_and_push_to_github "php-8.3.13" "php:8.3.13-apache-bookworm"
-build_and_push_to_github "php-runner-8.3.13" "php-runner:8.3.13-apache-bookworm" "php-runner:8.3.13-04"
-build_and_push_to_github "php-tools-8.3.13" "php-tools:8.3.13-apache-bookworm" "php-tools:8.3.13-03"
+build_and_push_to_github "php-runner-8.3.13" "php-runner:8.3.13-apache-bookworm" "php-runner:8.3.13-05"
+build_and_push_to_github "php-tools-8.3.13" "php-tools:8.3.13-apache-bookworm" "php-tools:8.3.13-05"
 build_and_push_to_github "python-3.13" "python:3.13-slim-bookworm"
 build_and_push_to_github "python-tools-3.13" "python-tools:3.13-slim-bookworm"
 
@@ -71,9 +71,6 @@ DOCKER_PLATFORMS="--platform linux/amd64"
 build_and_push_to_github "mkdocs" "polinux/mkdocs:1.5.2"
 build_and_push_to_github "azure-devops-tools" "azure-devops-tools:2.72" "azure-devops-tools:latest"
 
-# Test / A Fixer
-DOCKER_PLATFORMS="--platform linux/amd64,linux/arm64"
-build_and_push_to_github "node-tools-22" "node-tools:22-bullseye-slim" "node-tools:22-01"
 
 # Fin Chronomètre
 DURATION=$SECONDS
