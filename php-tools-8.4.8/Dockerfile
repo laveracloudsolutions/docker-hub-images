@@ -23,8 +23,6 @@ RUN apt-get update -qq && \
     libkrb5-3=1.20.* \
     libtasn1-6=4.* \
     nodejs=20.* \
-    perl=5.* \
-    xz-utils=5.* \
     yarn \
     zsh=5.*
 

@@ -27,6 +27,8 @@ RUN apt-get update -qq && \
     libzip-dev=1.* \
     linux-libc-dev=6.* \
     net-tools=2.* \
+    perl=5.* \
+    xz-utils=5.* \
     unzip=6.* \
     vim=2:9.* \
     xfonts-75dpi=1:1.* \
