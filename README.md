@@ -1,6 +1,10 @@
 # docker-images
 
-Ensemble d'images Docker personnalisées
+Ensemble d'images Docke
+r "de bases", issues de Docker Hub puis poussé sur le Github (ghcr.io) Petrolavera
+
+Permet de palier au problème de quota mis en place sur Docker Hub
+> https://docs.docker.com/docker-hub/usage/
 
 ## Push des Images Docker dans le Registry Github
 
@@ -22,17 +26,22 @@ GHCR_PAT="XXX"
 echo $GHCR_PAT | docker login ghcr.io -u GHCR_USERNAME --password-stdin
 ```
 
-## Préparation des images (Exemple)
+## Mise à jour des images (depuis un poste de Dev)
 
-Pour mise à jour globale des images
+Pour mettre à jour l'ensemble des images depuis un poste de Dev
+
 ```bash
-./.scripts/push-base-images.sh
+./.scripts/build_and_push.sh
 ```
 
-* Pour les images en provenance de Docker Hub, sans modification > Voir script dédié [push-base-images.sh](.scripts/push-base-images.sh)
-* Pour les images de bases personnalisées :
-    * [Build projets PHP](php-tools/README.md)
-    * [Run projets PHP](php-runner/README.md)
+## Mise à jour des images (depuis via Github Action)
+
+* Les images peuvent être mise à jour via un pipeline Github Action (voir section "cron" dans le fichier [build.yml](.github/workflows/build.yml))
+> https://github.com/laveracloudsolutions/docker-images/actions
+
+* Les images sont mises à jour périodiquement 
+> Voir section "cron" dans le fichier [build.yml](.github/workflows/build.yml)
+
 
 ## Github Administration - Public Docker Image
 
@@ -44,4 +53,3 @@ Par défaut, les repositories Github sont privé, pour les passer en publiques:
 
 ## Github Action - Mise à jour régulière
 
-* URL > https://github.com/laveracloudsolutions/docker-images/actions
