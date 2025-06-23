@@ -1,0 +1,112 @@
+{
+  "images": [
+    {
+      "folder": "pgadmin4",
+      "image_tag": "dpage/pgadmin4:9.1",
+      "image_additionnal_tag": "",
+      "platforms": "linux/amd64,linux/arm64"
+    },
+    {
+      "folder": "mailcatcher",
+      "image_tag": "dockage/mailcatcher:0.9",
+      "image_additionnal_tag": "",
+      "platforms": "linux/amd64,linux/arm64"
+    },
+    {
+      "folder": "maildev",
+      "image_tag": "maildev/maildev:2.2.1",
+      "image_additionnal_tag": "",
+      "platforms": "linux/amd64,linux/arm64"
+    },
+    {
+      "folder": "nginx",
+      "image_tag": "nginx:1.27.4",
+      "image_additionnal_tag": "",
+      "platforms": "linux/amd64,linux/arm64"
+    },
+    {
+      "folder": "node-20",
+      "image_tag": "node:20-bullseye-slim",
+      "image_additionnal_tag": "",
+      "platforms": "linux/amd64,linux/arm64"
+    },
+    {
+      "folder": "node-21",
+      "image_tag": "node:21-bullseye-slim",
+      "image_additionnal_tag": "",
+      "platforms": "linux/amd64,linux/arm64"
+    },
+    {
+      "folder": "node-22",
+      "image_tag": "node:22-bullseye-slim",
+      "image_additionnal_tag": "",
+      "platforms": "linux/amd64,linux/arm64"
+    },
+    {
+      "folder": "postgres-15",
+      "image_tag": "postgres:15.12-alpine",
+      "image_additionnal_tag": "",
+      "platforms": "linux/amd64,linux/arm64"
+    },
+    {
+      "folder": "postgres-16",
+      "image_tag": "postgres:16-alpine",
+      "image_additionnal_tag": "",
+      "platforms": "linux/amd64,linux/arm64"
+    },
+    {
+      "folder": "redis-5",
+      "image_tag": "redis:5-alpine",
+      "image_additionnal_tag": "",
+      "platforms": "linux/amd64,linux/arm64"
+    },
+    {
+      "folder": "redis-7",
+      "image_tag": "redis:7.2.5-bookworm",
+      "image_additionnal_tag": "",
+      "platforms": "linux/amd64,linux/arm64"
+    },
+    {
+      "folder": "ubuntu-20.04",
+      "image_tag": "ubuntu:20.04",
+      "image_additionnal_tag": "",
+      "platforms": "linux/amd64,linux/arm64"
+    },
+    {
+      "folder": "ubuntu-24.04",
+      "image_tag": "ubuntu:24.04",
+      "image_additionnal_tag": "",
+      "platforms": "linux/amd64,linux/arm64"
+    },
+    {
+      "folder": "wiremock-3.9",
+      "image_tag": "wiremock/wiremock:3.9.2",
+      "image_additionnal_tag": "",
+      "platforms": "linux/amd64,linux/arm64"
+    },
+    {
+      "folder": "wiremock-3.12",
+      "image_tag": "wiremock/wiremock:3.12.1",
+      "image_additionnal_tag": "",
+      "platforms": "linux/amd64,linux/arm64"
+    },
+    {
+      "folder": "php-8.3.13",
+      "image_tag": "php:8.3.13-apache-bookworm",
+      "image_additionnal_tag": "",
+      "platforms": "linux/amd64,linux/arm64/v8"
+    },
+    {
+      "folder": "php-8.4.8",
+      "image_tag": "php:8.4.8-apache-bookworm",
+      "image_additionnal_tag": "",
+      "platforms": "linux/amd64,linux/arm64/v8"
+    },
+    {
+      "folder": "python-3.13",
+      "image_tag": "python:3.13-slim-bookworm",
+      "image_additionnal_tag": "",
+      "platforms": "linux/amd64,linux/arm64/v8"
+    }
+  ]
+}
