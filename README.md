@@ -1,7 +1,6 @@
-# docker-images
+# Docker Hub Images
 
-Ensemble d'images Docke
-r "de bases", issues de Docker Hub puis poussé sur le Github (ghcr.io) Petrolavera
+Ensemble d'images Docker "de bases", issues de Docker Hub puis poussé sur le Github (ghcr.io) Petrolavera
 
 Permet de palier au problème de quota mis en place sur Docker Hub
 > https://docs.docker.com/docker-hub/usage/
