@@ -26,7 +26,7 @@ GHCR_PAT="XXX"
 echo $GHCR_PAT | docker login ghcr.io -u GHCR_USERNAME --password-stdin
 ```
 
-## Mise à jour des images (depuis un poste de Dev)
+## Mise à jour des images (via un poste de Dev)
 
 Pour mettre à jour l'ensemble des images depuis un poste de Dev
 
@@ -34,7 +34,7 @@ Pour mettre à jour l'ensemble des images depuis un poste de Dev
 ./.scripts/build_and_push.sh
 ```
 
-## Mise à jour des images (depuis via Github Action)
+## Mise à jour des images (via Github Action)
 
 * Les images peuvent être mise à jour via un pipeline Github Action (voir section "cron" dans le fichier [build.yml](.github/workflows/build.yml))
 > https://github.com/laveracloudsolutions/docker-images/actions
@@ -50,6 +50,3 @@ Par défaut, les repositories Github sont privé, pour les passer en publiques:
 * Désactiver "Inherit access from source repository" > https://github.com/settings/packages
 * Sélectionner le package concerné > https://github.com/orgs/laveracloudsolutions/packages
 * Package Setting > Danger Zone > Change Visibility
-
-## Github Action - Mise à jour régulière
-
