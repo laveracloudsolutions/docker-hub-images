@@ -61,7 +61,13 @@
       "platforms": "linux/amd64,linux/arm64"
     },
     {
-      "folder": "redis-7",
+      "folder": "redis-7.2",
+      "image_tag": "redis:7.2-bookworm",
+      "image_additionnal_tag": "",
+      "platforms": "linux/amd64,linux/arm64"
+    },
+    {
+      "folder": "redis-7.2.5",
       "image_tag": "redis:7.2.5-bookworm",
       "image_additionnal_tag": "",
       "platforms": "linux/amd64,linux/arm64"
