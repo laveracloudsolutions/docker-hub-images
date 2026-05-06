@@ -85,6 +85,12 @@
       "platforms": "linux/amd64,linux/arm64"
     },
     {
+      "folder": "ubuntu-26.04",
+      "image_tag": "ubuntu:26.04",
+      "image_additionnal_tag": "",
+      "platforms": "linux/amd64,linux/arm64"
+    },
+    {
       "folder": "wiremock-3.9",
       "image_tag": "wiremock/wiremock:3.9.2",
       "image_additionnal_tag": "",
