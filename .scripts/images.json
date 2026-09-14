@@ -26,19 +26,19 @@
     },
     {
       "folder": "node-20",
-      "image_tag": "node:20-bullseye-slim",
+      "image_tag": "node:20-bookworm-slim",
       "image_additionnal_tag": "",
       "platforms": "linux/amd64,linux/arm64"
     },
     {
       "folder": "node-21",
-      "image_tag": "node:21-bullseye-slim",
+      "image_tag": "node:21-bookworm-slim",
       "image_additionnal_tag": "",
       "platforms": "linux/amd64,linux/arm64"
     },
     {
       "folder": "node-22",
-      "image_tag": "node:22-bullseye-slim",
+      "image_tag": "node:22-trixie-slim",
       "image_additionnal_tag": "",
       "platforms": "linux/amd64,linux/arm64"
     },

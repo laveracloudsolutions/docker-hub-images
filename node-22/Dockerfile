@@ -1,2 +1,2 @@
-FROM node:22-bullseye-slim
-RUN echo "node:22-bullseye-slim"
+FROM node:22-trixie-slim
+RUN echo "node:22-trixie-slim"
