@@ -1,6 +1,12 @@
 {
   "images": [
     {
+      "folder": "gitversion",
+      "image_tag": "gittools/gitversion:6.8.2-alpine.3.23-10.0",
+      "image_additionnal_tag": "gittools/gitversion:6.8.2",
+      "platforms": "linux/amd64"
+    },
+    {
       "folder": "pgadmin4",
       "image_tag": "dpage/pgadmin4:9.1",
       "image_additionnal_tag": "",
