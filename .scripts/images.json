@@ -31,30 +31,6 @@
       "platforms": "linux/amd64,linux/arm64"
     },
     {
-      "folder": "node-20",
-      "image_tag": "node:20-bookworm-slim",
-      "image_additionnal_tag": "",
-      "platforms": "linux/amd64,linux/arm64"
-    },
-    {
-      "folder": "node-21",
-      "image_tag": "node:21-bookworm-slim",
-      "image_additionnal_tag": "",
-      "platforms": "linux/amd64,linux/arm64"
-    },
-    {
-      "folder": "node-22",
-      "image_tag": "node:22-trixie-slim",
-      "image_additionnal_tag": "",
-      "platforms": "linux/amd64,linux/arm64"
-    },
-    {
-      "folder": "node-24",
-      "image_tag": "node:24-trixie-slim",
-      "image_additionnal_tag": "",
-      "platforms": "linux/amd64,linux/arm64"
-    },
-    {
       "folder": "postgres-15",
       "image_tag": "postgres:15.12-alpine",
       "image_additionnal_tag": "",
