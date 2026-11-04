@@ -1,2 +1,2 @@
-FROM dpage/pgadmin4:9.1
-RUN echo "dpage/pgadmin4:9.1"
+FROM dpage/pgadmin4:9.19
+RUN echo "dpage/pgadmin4:9.19"

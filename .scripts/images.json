@@ -7,6 +7,12 @@
       "platforms": "linux/amd64"
     },
     {
+      "folder": "jaeger",
+      "image_tag": "jaegertracing/jaeger:latest",
+      "image_additionnal_tag": "",
+      "platforms": "linux/amd64"
+    },
+    {
       "folder": "pgadmin4",
       "image_tag": "dpage/pgadmin4:9.1",
       "image_additionnal_tag": "",
@@ -47,6 +53,12 @@
       "image_tag": "postgres:17-alpine",
       "image_additionnal_tag": "",
       "platforms": "linux/amd64,linux/arm64"
+    },
+    {
+      "folder": "python-3.13",
+      "image_tag": "python:3.13-slim-bookworm",
+      "image_additionnal_tag": "",
+      "platforms": "linux/amd64,linux/arm64/v8"
     },
     {
       "folder": "redis-5",
@@ -97,10 +109,10 @@
       "platforms": "linux/amd64,linux/arm64"
     },
     {
-      "folder": "python-3.13",
-      "image_tag": "python:3.13-slim-bookworm",
-      "image_additionnal_tag": "",
-      "platforms": "linux/amd64,linux/arm64/v8"
+      "folder": "wiremock-3.13",
+      "image_tag": "wiremock/wiremock:3.13",
+      "image_additionnal_tag": "wiremock/wiremock:3.13.2",
+      "platforms": "linux/amd64,linux/arm64"
     }
   ]
 }

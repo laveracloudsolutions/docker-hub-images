@@ -1,2 +1,2 @@
-FROM maildev/maildev:2.2.1
-RUN echo "maildev/maildev:2.2.1"
+FROM maildev/maildev:3.0.0
+RUN echo "maildev/maildev:3.0.0"
