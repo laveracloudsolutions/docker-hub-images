@@ -32,7 +32,7 @@
     },
     {
       "folder": "nginx",
-      "image_tag": "nginx:1.27.4",
+      "image_tag": "nginx:1.31.8",
       "image_additionnal_tag": "",
       "platforms": "linux/amd64,linux/arm64"
     },
