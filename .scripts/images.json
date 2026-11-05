@@ -14,7 +14,7 @@
     },
     {
       "folder": "pgadmin4",
-      "image_tag": "dpage/pgadmin4:9.19",
+      "image_tag": "dpage/pgadmin4:latest",
       "image_additionnal_tag": "",
       "platforms": "linux/amd64,linux/arm64"
     },
